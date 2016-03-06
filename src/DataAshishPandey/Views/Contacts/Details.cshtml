@@ -1,0 +1,36 @@
+@model DataAshishPandey.Models.Contact
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FromEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FromEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FromName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FromName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.contactID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>
